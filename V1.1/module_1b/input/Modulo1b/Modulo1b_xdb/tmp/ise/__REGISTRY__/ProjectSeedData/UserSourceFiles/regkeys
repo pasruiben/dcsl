@@ -1,0 +1,9 @@
+NUM_USER_FILES
+2
+s
+user_file_1
+../register_en.vhd
+s
+user_file_2
+../tb_register_en.vhd
+s

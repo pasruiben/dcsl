@@ -1,0 +1,39 @@
+Running : /opt/cad/xilinx/ise/10.1/ISE/bin/lin/unwrapped/fuse -ise
+/home/practicas/Escritorio/DCSL/V1.1/module_1c/input/Module1cUpDown/Module1cUpDo
+wn.ise -intstyle ise -incremental -o tb_counter_updown_isim_beh.exe -prj
+tb_counter_updown_beh.prj -top tb_counter_updown
+Determining compilation order of HDL files
+Analyzing VHDL file ../../../module_1a/input/micro_pk.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Restoring VHDL parse-tree ieee.numeric_std from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+Analyzing VHDL file ../counter_updown.vhd
+Analyzing VHDL file ../tb_counter_updown.vhd
+Saving VHDL parse-tree work.micro_pk into
+/home/practicas/Escritorio/DCSL/V1.1/module_1c/input/Module1cUpDown/isim/work/mi
+cro_pk.vdb
+Saving VHDL parse-tree work.counter_updown into
+/home/practicas/Escritorio/DCSL/V1.1/module_1c/input/Module1cUpDown/isim/work/co
+unter_updown.vdb
+Saving VHDL parse-tree work.tb_counter_updown into
+/home/practicas/Escritorio/DCSL/V1.1/module_1c/input/Module1cUpDown/isim/work/tb
+_counter_updown.vdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 23288 Kb
+Fuse CPU Usage: 350 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling package micro_pk
+Compiling architecture behavioral of entity counter_updown
+[\counter_updown(8,0,8,0)\]
+Compiling architecture test of entity tb_counter_updown
+Compiled 7 VHDL Units
+Built simulation executable tb_counter_updown_isim_beh.exe
+Fuse Memory Usage: 24460 Kb
+Fuse CPU Usage: 370 ms
+GCC CPU Usage: 320 ms

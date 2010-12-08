@@ -1,0 +1,48 @@
+Running : /opt/cad/xilinx/ise/10.1/ISE/bin/lin/unwrapped/fuse -ise
+/home/practicas/Escritorio/DCSL/V1.1/module_1e/input/Modulo2/Modulo2.ise
+-intstyle ise -incremental -o alu_tb_isim_beh.exe -prj alu_tb_beh.prj -top
+alu_tb
+Determining compilation order of HDL files
+Analyzing VHDL file ../../../module_1a/input/micro_pk.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Restoring VHDL parse-tree ieee.numeric_std from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+Analyzing VHDL file ../../../module_2a/input/alu.vhd
+Analyzing VHDL file ../micro_comp_pk.vhd
+Analyzing VHDL file ../../../module_2b/input/alu_tb.vhd
+Restoring VHDL parse-tree std.textio from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/std/textio.vdb
+Restoring VHDL parse-tree ieee.std_logic_textio from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_textio.vdb
+Saving VHDL parse-tree work.micro_pk into
+/home/practicas/Escritorio/DCSL/V1.1/module_1e/input/Modulo2/isim/work/micro_pk.
+vdb
+Saving VHDL parse-tree work.alu into
+/home/practicas/Escritorio/DCSL/V1.1/module_1e/input/Modulo2/isim/work/alu.vdb
+Saving VHDL parse-tree work.micro_comp_pk into
+/home/practicas/Escritorio/DCSL/V1.1/module_1e/input/Modulo2/isim/work/micro_com
+p_pk.vdb
+Saving VHDL parse-tree work.alu_tb into
+/home/practicas/Escritorio/DCSL/V1.1/module_1e/input/Modulo2/isim/work/alu_tb.vd
+b
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 23904 Kb
+Fuse CPU Usage: 470 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Using precompiled package textio from library std
+Using precompiled package std_logic_textio from library ieee
+Compiling package micro_pk
+Compiling package micro_comp_pk
+Compiling architecture behavioral of entity alu [alu_default]
+Compiling architecture test of entity alu_tb
+Compiled 10 VHDL Units
+Built simulation executable alu_tb_isim_beh.exe
+Fuse Memory Usage: 24932 Kb
+Fuse CPU Usage: 500 ms
+GCC CPU Usage: 370 ms

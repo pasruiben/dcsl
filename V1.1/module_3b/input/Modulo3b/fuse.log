@@ -1,0 +1,49 @@
+Determining compilation order of HDL files
+Analyzing VHDL file ../../../module_1a/input/micro_pk.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Restoring VHDL parse-tree ieee.numeric_std from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+Analyzing VHDL file ../memCtrl.vhd
+Analyzing VHDL file ../../../module_1e/input/micro_comp_pk.vhd
+Analyzing VHDL file ../tb_memCtrl.vhd
+Saving VHDL parse-tree work.micro_pk into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_3b/input/Modulo3b/isim/work/micro_pk.v
+db
+Saving VHDL parse-tree work.memctrl into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_3b/input/Modulo3b/isim/work/memctrl.vd
+b
+Saving VHDL parse-tree work.micro_comp_pk into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_3b/input/Modulo3b/isim/work/micro_comp
+_pk.vdb
+Saving VHDL parse-tree work.tb_memctrl into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_3b/input/Modulo3b/isim/work/tb_memctrl
+.vdb
+Starting static elaboration
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 867. Range is
+   empty (null range)
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 868. Range is
+   empty (null range)
+WARNING:HDLCompiler:89 - "../tb_memCtrl.vhd" Line 164. memory remains a
+   black-box since it has no binding entity
+Completed static elaboration
+Fuse Memory Usage: 23452 Kb
+Fuse CPU Usage: 910 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+WARNING:Simulator:648 - "../tb_memCtrl.vhd" Line 164. Instance memory is unbound
+Compiling package micro_pk
+Compiling package micro_comp_pk
+Compiling architecture behavioral of entity memctrl
+[\memCtrl(11,0,31,0,31,0,11,0,31,...]
+Compiling architecture test of entity tb_memctrl
+Compiled 8 VHDL Units
+Built simulation executable tb_memCtrl_isim_beh.exe
+Fuse Memory Usage: 24812 Kb
+Fuse CPU Usage: 990 ms
+GCC CPU Usage: 670 ms

@@ -1,0 +1,39 @@
+Command line:
+   ./tb_micro_pk_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  58373
+
+Thu Oct 21 13:44:55 2010
+
+Total Line Count : 9
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 123.974 Meg
+
+ Total Signals          : 2
+ Total Nets             : 2
+ Total Signal Drivers   : 0
+ Total Blocks           : 4
+ Total Primitive Blocks : 1
+ Total Processes        : 1
+ Total Traceable Variables  : 59
+ Total Scalar Nets and Variables : 985
+ntrace select -o on -n /tb_micro_pk/dw 
+ntrace select -o on -n /tb_micro_pk/aw 
+ntrace select -o on -n /tb_micro_pk/vec1 
+ntrace select -o on -n /tb_micro_pk/vec2 
+ntrace select -o on -n /tb_micro_pk/vec3 
+ntrace select -o on -n /tb_micro_pk/vec4 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.11 sec
+
+ Current Memory Usage: 136.815 Meg
+
+Thu Oct 21 13:45:34 2010
+

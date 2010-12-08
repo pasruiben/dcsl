@@ -1,0 +1,6 @@
+CommandLine
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/xst -ise /home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/Modulo3c.ise -intstyle ise -ifn /home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/stack.xst -ofn /home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/stack.syr -finalclean 1
+s
+FormatString
+xst [-ifn <InputFile>] [-ofn <OutputFile>] [-ise <iseProjectFile>] [--quiet] [-intstyle <Style>] [--deb <DebugLevel>] [--finalclean <Clean>] [--PcubeFlow] [--globOptFlow] [--XstNtrc]
+s

@@ -1,0 +1,5 @@
+vhdl isim_temp "../../../module_1a/input/micro_pk.vhd"
+vhdl isim_temp "../micro_ram_pk.vhd"
+vhdl isim_temp "../memory.vhd"
+vhdl isim_temp "../../../module_1e/input/micro_comp_pk.vhd"
+vhdl isim_temp "../tb_memory.vhd"

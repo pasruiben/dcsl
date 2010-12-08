@@ -1,0 +1,4 @@
+vhdl work "../../../module_1a/input/micro_pk.vhd"
+vhdl work "../../../module_2a/input/alu.vhd"
+vhdl work "../micro_comp_pk.vhd"
+vhdl work "../../../module_2b/input/alu_tb.vhd"

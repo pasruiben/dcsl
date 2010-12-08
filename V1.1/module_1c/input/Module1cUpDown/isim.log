@@ -1,0 +1,41 @@
+Command line:
+   ./tb_counter_updown_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  39702
+
+Tue Oct 26 13:14:29 2010
+
+Total Line Count : 50
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 229.282 Meg
+
+ Total Signals          : 16
+ Total Nets             : 33
+ Total Signal Drivers   : 9
+ Total Blocks           : 5
+ Total Primitive Blocks : 1
+ Total Processes        : 5
+ Total Traceable Variables  : 52
+ Total Scalar Nets and Variables : 833
+ntrace select -o on -n /tb_counter_updown/rst 
+ntrace select -o on -n /tb_counter_updown/clk 
+ntrace select -o on -n /tb_counter_updown/d 
+ntrace select -o on -n /tb_counter_updown/ld 
+ntrace select -o on -n /tb_counter_updown/inc 
+ntrace select -o on -n /tb_counter_updown/dec 
+ntrace select -o on -n /tb_counter_updown/q 
+ntrace select -o on -n /tb_counter_updown/endofsim 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.03 sec
+
+ Current Memory Usage: 239.124 Meg
+
+Tue Oct 26 13:15:07 2010
+

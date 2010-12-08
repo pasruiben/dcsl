@@ -1,0 +1,30 @@
+set -tmpdir "/home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/xst/projnav.tmp"
+set -xsthdpdir "/home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/xst"
+run
+-ifn stack.prj
+-ifmt mixed
+-ofn stack
+-ofmt NGC
+-p xa9500xl
+-top stack
+-opt_mode Speed
+-opt_level 1
+-iuc NO
+-lso stack.lso
+-keep_hierarchy YES
+-netlist_hierarchy as_optimized
+-rtlview Yes
+-hierarchy_separator /
+-bus_delimiter <>
+-case maintain
+-verilog2001 YES
+-fsm_extract YES -fsm_encoding Auto
+-safe_implementation No
+-mux_extract YES
+-resource_sharing YES
+-iobuf YES
+-pld_mp YES
+-pld_xp YES
+-pld_ce YES
+-wysiwyg NO
+-equivalent_register_removal YES

@@ -1,0 +1,43 @@
+Command line:
+   ./tb_memory_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  58924
+
+Thu Nov 25 10:30:37 2010
+
+Total Line Count : 45
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 124.797 Meg
+
+ Total Signals          : 16
+ Total Nets             : 82
+ Total Signal Drivers   : 9
+ Total Blocks           : 7
+ Total Primitive Blocks : 1
+ Total Processes        : 4
+ Total Traceable Variables  : 54
+ Total Scalar Nets and Variables : 131803
+ntrace select -o on -n /tb_memory/clk 
+ntrace select -o on -n /tb_memory/inbus 
+ntrace select -o on -n /tb_memory/outbus 
+ntrace select -o on -n /tb_memory/rd 
+ntrace select -o on -n /tb_memory/wr 
+ntrace select -o on -n /tb_memory/ready 
+ntrace select -o on -n /tb_memory/addr 
+ntrace select -o on -n /tb_memory/endofsim 
+ntrace select -o on -n /tb_memory/clkperiod 
+ntrace select -o on -n /tb_memory/dutycycle 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.13 sec
+
+ Current Memory Usage: 138.678 Meg
+
+Thu Nov 25 12:26:55 2010
+

@@ -1,0 +1,40 @@
+Command line:
+   ./tb_counter_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  51610
+
+Thu Oct 21 13:48:55 2010
+
+Total Line Count : 39
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 123.978 Meg
+
+ Total Signals          : 14
+ Total Nets             : 29
+ Total Signal Drivers   : 8
+ Total Blocks           : 5
+ Total Primitive Blocks : 1
+ Total Processes        : 5
+ Total Traceable Variables  : 52
+ Total Scalar Nets and Variables : 788
+ntrace select -o on -n /tb_counter/rst 
+ntrace select -o on -n /tb_counter/clk 
+ntrace select -o on -n /tb_counter/d 
+ntrace select -o on -n /tb_counter/ld 
+ntrace select -o on -n /tb_counter/inc 
+ntrace select -o on -n /tb_counter/q 
+ntrace select -o on -n /tb_counter/endofsim 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.12 sec
+
+ Current Memory Usage: 136.79 Meg
+
+Thu Oct 21 13:50:25 2010
+

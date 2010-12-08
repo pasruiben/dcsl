@@ -1,0 +1,40 @@
+Determining compilation order of HDL files
+Analyzing VHDL file ../../../module_1a/input/micro_pk.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Restoring VHDL parse-tree ieee.numeric_std from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+Analyzing VHDL file ../counter.vhd
+Analyzing VHDL file ../tb_counter.vhd
+Saving VHDL parse-tree work.micro_pk into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_1c/input/Module1c/isim/work/micro_pk.v
+db
+Saving VHDL parse-tree work.counter into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_1c/input/Module1c/isim/work/counter.vd
+b
+Saving VHDL parse-tree work.tb_counter into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_1c/input/Module1c/isim/work/tb_counter
+.vdb
+Starting static elaboration
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 867. Range is
+   empty (null range)
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 868. Range is
+   empty (null range)
+Completed static elaboration
+Fuse Memory Usage: 23452 Kb
+Fuse CPU Usage: 860 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling package micro_pk
+Compiling architecture behavioral of entity counter [\counter(7,0,7,0)\]
+Compiling architecture test of entity tb_counter
+Compiled 7 VHDL Units
+Built simulation executable tb_counter_isim_beh.exe
+Fuse Memory Usage: 24480 Kb
+Fuse CPU Usage: 910 ms
+GCC CPU Usage: 1110 ms
