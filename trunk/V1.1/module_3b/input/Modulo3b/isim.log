@@ -1,0 +1,64 @@
+Command line:
+   ./tb_memCtrl_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  40875
+
+Thu Nov 25 19:49:24 2010
+
+Total Line Count : 187
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 124.256 Meg
+
+ Total Signals          : 57
+ Total Nets             : 291
+ Total Signal Drivers   : 28
+ Total Blocks           : 6
+ Total Primitive Blocks : 1
+ Total Processes        : 8
+ Total Traceable Variables  : 54
+ Total Scalar Nets and Variables : 941
+ntrace select -o on -n /tb_memctrl/rst 
+ntrace select -o on -n /tb_memctrl/clk 
+ntrace select -o on -n /tb_memctrl/rqdpt 
+ntrace select -o on -n /tb_memctrl/rddpt 
+ntrace select -o on -n /tb_memctrl/wrdpt 
+ntrace select -o on -n /tb_memctrl/addrdpt 
+ntrace select -o on -n /tb_memctrl/datatodpt 
+ntrace select -o on -n /tb_memctrl/datafromdpt 
+ntrace select -o on -n /tb_memctrl/readydpt 
+ntrace select -o on -n /tb_memctrl/rqfch 
+ntrace select -o on -n /tb_memctrl/rdfch 
+ntrace select -o on -n /tb_memctrl/addrfch 
+ntrace select -o on -n /tb_memctrl/datatofch 
+ntrace select -o on -n /tb_memctrl/readyfch 
+ntrace select -o on -n /tb_memctrl/rqio 
+ntrace select -o on -n /tb_memctrl/rdio 
+ntrace select -o on -n /tb_memctrl/wrio 
+ntrace select -o on -n /tb_memctrl/addrio 
+ntrace select -o on -n /tb_memctrl/datatoio 
+ntrace select -o on -n /tb_memctrl/datafromio 
+ntrace select -o on -n /tb_memctrl/readyio 
+ntrace select -o on -n /tb_memctrl/addr 
+ntrace select -o on -n /tb_memctrl/datain 
+ntrace select -o on -n /tb_memctrl/dataout 
+ntrace select -o on -n /tb_memctrl/memrd 
+ntrace select -o on -n /tb_memctrl/memwr 
+ntrace select -o on -n /tb_memctrl/memready 
+ntrace select -o on -n /tb_memctrl/endofsim 
+ntrace select -o on -n /tb_memctrl/clkperiod 
+ntrace select -o on -n /tb_memctrl/dutycycle 
+ntrace select -o on -n /tb_memctrl/delay 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.17 sec
+
+ Current Memory Usage: 137.093 Meg
+
+Thu Nov 25 19:50:12 2010
+

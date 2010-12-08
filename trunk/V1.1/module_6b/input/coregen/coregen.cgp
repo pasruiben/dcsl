@@ -1,0 +1,20 @@
+# Date: Wed Feb 14 16:20:18 2007
+SET flowvendor = Other
+SET vhdlsim = True
+SET verilogsim = False
+SET workingdirectory = D:\Lab4_microprocessor\Engels\V1.1\module_6a\coregen\tmp
+SET speedgrade = -7
+SET simulationfiles = Behavioral
+SET asysymbol = False
+SET addpads = False
+SET device = xc2vp30
+SET implementationfiletype = Edif
+SET busformat = BusFormatAngleBracketNotRipped
+SET foundationsym = False
+SET package = ff896
+SET createndf = False
+SET designentry = VHDL
+SET devicefamily = virtex2p
+SET formalverification = False
+SET removerpms = False
+

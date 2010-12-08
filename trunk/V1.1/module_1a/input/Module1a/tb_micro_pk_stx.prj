@@ -1,0 +1,2 @@
+vhdl isim_temp "../micro_pk.vhd"
+vhdl isim_temp "../tb_micro_pk.vhd"

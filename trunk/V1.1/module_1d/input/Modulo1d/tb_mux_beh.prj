@@ -1,0 +1,3 @@
+vhdl work "../mux4xbus.vhd"
+vhdl work "../mux2xbus.vhd"
+vhdl work "../tb_mux.vhd"

@@ -1,0 +1,7 @@
+# Output products list for <micro6_ram>
+micro6_ram.edn
+micro6_ram.mif
+micro6_ram.vhd
+micro6_ram.vho
+micro6_ram.xco
+micro6_ram_flist.txt

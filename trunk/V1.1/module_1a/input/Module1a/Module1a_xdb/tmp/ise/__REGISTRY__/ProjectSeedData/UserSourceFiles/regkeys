@@ -1,0 +1,9 @@
+NUM_USER_FILES
+2
+s
+user_file_1
+../micro_pk.vhd
+s
+user_file_2
+../tb_micro_pk.vhd
+s

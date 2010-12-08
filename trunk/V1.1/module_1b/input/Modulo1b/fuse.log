@@ -1,0 +1,35 @@
+Determining compilation order of HDL files
+Analyzing VHDL file ../register_en.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Analyzing VHDL file ../tb_register_en.vhd
+Restoring VHDL parse-tree ieee.numeric_std from
+/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+Saving VHDL parse-tree work.register_en into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_1b/input/Modulo1b/isim/work/register_e
+n.vdb
+Saving VHDL parse-tree work.tb_register_en into
+/home/pascual/INGENIERIA/DCSL/V1.1/module_1b/input/Modulo1b/isim/work/tb_registe
+r_en.vdb
+Starting static elaboration
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 867. Range is
+   empty (null range)
+WARNING:HDLCompiler:746 -
+   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 868. Range is
+   empty (null range)
+Completed static elaboration
+Fuse Memory Usage: 23408 Kb
+Fuse CPU Usage: 840 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Using precompiled package numeric_std from library ieee
+Compiling architecture behavioral of entity register_en [\register_en(7,0,7,0)\]
+Compiling architecture test of entity tb_register_en
+Compiled 6 VHDL Units
+Built simulation executable tb_register_en_isim_beh.exe
+Fuse Memory Usage: 24436 Kb
+Fuse CPU Usage: 890 ms
+GCC CPU Usage: 990 ms

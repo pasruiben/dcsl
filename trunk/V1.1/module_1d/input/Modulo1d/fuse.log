@@ -1,0 +1,35 @@
+Running : /opt/cad/xilinx/ise/10.1/ISE/bin/lin/unwrapped/fuse -ise
+/home/practicas/Escritorio/DCSL/V1.1/module_1d/input/Modulo1d/Modulo1d.ise
+-intstyle ise -incremental -o tb_mux_isim_beh.exe -prj tb_mux_beh.prj -top
+tb_mux
+Determining compilation order of HDL files
+Analyzing VHDL file ../mux4xbus.vhd
+Restoring VHDL parse-tree ieee.std_logic_1164 from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+Restoring VHDL parse-tree std.standard from
+/opt/cad/xilinx/ise/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+Analyzing VHDL file ../mux2xbus.vhd
+Analyzing VHDL file ../tb_mux.vhd
+Saving VHDL parse-tree work.mux4xbus into
+/home/practicas/Escritorio/DCSL/V1.1/module_1d/input/Modulo1d/isim/work/mux4xbus
+.vdb
+Saving VHDL parse-tree work.mux2xbus into
+/home/practicas/Escritorio/DCSL/V1.1/module_1d/input/Modulo1d/isim/work/mux2xbus
+.vdb
+Saving VHDL parse-tree work.tb_mux into
+/home/practicas/Escritorio/DCSL/V1.1/module_1d/input/Modulo1d/isim/work/tb_mux.v
+db
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 22836 Kb
+Fuse CPU Usage: 220 ms
+Using precompiled package standard from library std
+Using precompiled package std_logic_1164 from library ieee
+Compiling architecture behavioral of entity mux2xbus [mux2xbus_default]
+Compiling architecture behavioral of entity mux4xbus [mux4xbus_default]
+Compiling architecture test of entity tb_mux
+Compiled 7 VHDL Units
+Built simulation executable tb_mux_isim_beh.exe
+Fuse Memory Usage: 23864 Kb
+Fuse CPU Usage: 230 ms
+GCC CPU Usage: 140 ms

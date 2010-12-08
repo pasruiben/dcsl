@@ -1,0 +1,43 @@
+Command line:
+   ./tb_stack_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  60833
+
+Thu Nov 25 19:31:04 2010
+
+Total Line Count : 96
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 124.133 Meg
+
+ Total Signals          : 20
+ Total Nets             : 176
+ Total Signal Drivers   : 13
+ Total Blocks           : 5
+ Total Primitive Blocks : 1
+ Total Processes        : 6
+ Total Traceable Variables  : 55
+ Total Scalar Nets and Variables : 827
+ntrace select -o on -n /tb_stack/clk 
+ntrace select -o on -n /tb_stack/rst 
+ntrace select -o on -n /tb_stack/en 
+ntrace select -o on -n /tb_stack/d 
+ntrace select -o on -n /tb_stack/push 
+ntrace select -o on -n /tb_stack/pop 
+ntrace select -o on -n /tb_stack/q 
+ntrace select -o on -n /tb_stack/endofsim 
+ntrace select -o on -n /tb_stack/clkperiod 
+ntrace select -o on -n /tb_stack/dutycycle 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.14 sec
+
+ Current Memory Usage: 137.884 Meg
+
+Thu Nov 25 19:32:39 2010
+

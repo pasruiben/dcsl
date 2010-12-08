@@ -1,0 +1,2 @@
+vhdl work "../micro_pk.vhd"
+vhdl work "../tb_micro_pk.vhd"

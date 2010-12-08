@@ -1,0 +1,4 @@
+vhdl work "../../../module_1a/input/micro_pk.vhd"
+vhdl work "../memCtrl.vhd"
+vhdl work "../../../module_1e/input/micro_comp_pk.vhd"
+vhdl work "../tb_memCtrl.vhd"

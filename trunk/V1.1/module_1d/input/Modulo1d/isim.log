@@ -1,0 +1,42 @@
+Command line:
+   ./tb_mux_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  37502
+
+Tue Oct 26 13:15:39 2010
+
+Total Line Count : 39
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 229.171 Meg
+
+ Total Signals          : 19
+ Total Nets             : 31
+ Total Signal Drivers   : 9
+ Total Blocks           : 4
+ Total Primitive Blocks : 2
+ Total Processes        : 3
+ Total Traceable Variables  : 8
+ Total Scalar Nets and Variables : 391
+ntrace select -o on -n /tb_mux/bus0 
+ntrace select -o on -n /tb_mux/bus1 
+ntrace select -o on -n /tb_mux/bus2 
+ntrace select -o on -n /tb_mux/bus3 
+ntrace select -o on -n /tb_mux/bus4 
+ntrace select -o on -n /tb_mux/busi 
+ntrace select -o on -n /tb_mux/busout 
+ntrace select -o on -n /tb_mux/sel1 
+ntrace select -o on -n /tb_mux/sel2 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.04 sec
+
+ Current Memory Usage: 238.981 Meg
+
+Tue Oct 26 13:18:14 2010
+

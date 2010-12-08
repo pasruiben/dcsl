@@ -1,0 +1,3 @@
+vhdl work "../../../module_1a/input/micro_pk.vhd"
+vhdl work "../counter_updown.vhd"
+vhdl work "../tb_counter_updown.vhd"

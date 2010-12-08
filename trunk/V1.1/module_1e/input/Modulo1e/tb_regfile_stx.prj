@@ -1,0 +1,6 @@
+vhdl isim_temp "../../../module_1a/input/micro_pk.vhd"
+vhdl isim_temp "../register_en.vhd"
+vhdl isim_temp "../micro_comp_pk.vhd"
+vhdl isim_temp "../../../module_1c/input/counter_updown.vhd"
+vhdl isim_temp "../regfile.vhd"
+vhdl isim_temp "../tb_regFile.vhd"

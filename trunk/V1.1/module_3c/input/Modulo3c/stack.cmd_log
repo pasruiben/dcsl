@@ -1,0 +1,1 @@
+xst -ise "/home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/Modulo3c.ise" -intstyle ise -ifn "/home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/stack.xst" -ofn "/home/pascual/INGENIERIA/DCSL/V1.1/module_3c/input/Modulo3c/stack.syr"

@@ -1,0 +1,2 @@
+vhdl work "../../../module_1a/input/micro_pk.vhd"
+vhdl work "../stack.vhd"
