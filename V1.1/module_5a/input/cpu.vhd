@@ -187,22 +187,22 @@ begin
 
   
   data_bus_1: mux4xbus port map (
-    inport0 =>                    -- add code here
-    inport1 =>                    -- add code here
-    inport2 =>                    -- add code here
-    inport3 =>                    -- add code here
+    inport0 => ACCout,                    -- add code here
+    inport1 => MARout,                  -- add code here
+    inport2 => data_bus_inport2,                   -- add code here
+    inport3 => data_bus_inport3,                   -- add code here
     sel     => DATAsel, -- (00:ACC, 01:MBR , 10:extended stack  , 11:extended control)
     outport => data_bus);
     
   alu_port_a_mux: mux2xbus port map (
-    inport0 =>                     -- add code here
-    inport1 =>                     -- add code here
+    inport0 => regFile_port_a,                    -- add code here
+    inport1 => ACCout,                    -- add code here
     sel     => portAsel, -- (0:regfile A ,1:ACC)
     outport => alu_port_a);
     
   alu_port_b_mux: mux2xbus port map (
-    inport0 =>                     -- add code here
-    inport1 =>                     -- add code here
+    inport0 => regFile_port_b,                    -- add code here
+    inport1 => ACCout,                    -- add code here
     sel     => portBsel, -- (0:regfile B ,1:ACC)
     outport => alu_port_b);
     
@@ -222,20 +222,20 @@ begin
   regFile_1: regFile port map (
     rst    => rst,
     clk    => clk,
-    busC   =>                     -- add code here
+    busC   => data_bus,                    -- add code here
     stkInc => stkInc,
     stkDec => stkDec,
     wr     => RegFileWr,
     selA   => selA,
     selB   => selB,
     selC   => selC,
-    busA   =>                     -- add code here
-    busB   =>                     -- add code here
+    busA   => regFile_port_a,                    -- add code here
+    busB   => regFile_port_b                    -- add code here
     );
     
   alu_1: alu port map (
-    a           =>                     -- add code here
-    b           =>                     -- add code here
+    a           => alu_port_a,                    -- add code here
+    b           => alu_port_b,                    -- add code here
     sel         => ALUsel,
     shiftCnt    => shiftCnt,
     shiftCntSrc => shiftCntSrc,
@@ -249,50 +249,50 @@ begin
     clk => clk,
     en  => ACCen,
     d   => alu_result,
-    q   =>                     -- add code here
+    q   => AccOut                    -- add code here
     );
     
   stack_1: stack port map (
     rst  => rst,
     clk  => clk,
     en   => STKen,
-    d    =>                     -- add code here
+    d    => PCout,                    -- add code here
     push => STKpush,
     pop  => STKpop,
-    q    =>                     -- add code here
+    q    => data_bus_inport2                    -- add code here
     );
     
   pc_1: counter port map (
     rst => rst,
     clk => clk,
-    d   =>                     -- add code here  (only 12 LSB's)
+    d   => data_bus (11 downto 0),                    -- add code here  (only 12 LSB's)
     ld  => Pcen,
     inc => PCinc,
-    q   =>                     -- add code here
+    q   => PCout                    -- add code here
     );
     
   mar_1: register_en port map (
     rst => rst,
     clk => clk,
     en  => MARen,
-    d   =>                      -- add code here  (only 12 LSB's)
-    q   =>                      -- add code here
+    d   => data_bus (11 downto 0),                     -- add code here  (only 12 LSB's)
+    q   => MARout                     -- add code here
     );
     
   mbr_1: register_en port map (
     rst => rst,
     clk => clk,
     en  => MBRen,
-    d   =>                       -- add code here
-    q   =>                       -- add code here
+    d   => mbr_bus,                      -- add code here
+    q   => MBRout                      -- add code here
     );
     
   instReg_1: register_en port map (
     rst => rst,
     clk => clk,
     en  => IRen,
-    d   =>                       -- add code here
-    q   =>                       -- add code here
+    d   => instReg,                      -- add code here
+    q   => instRegOut                      -- add code here
     );
     
   fetch_1: fetch port map (

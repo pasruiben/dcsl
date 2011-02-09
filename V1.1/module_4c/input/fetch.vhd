@@ -67,10 +67,11 @@ end entity;
 
 architecture moore of fetch is
   -- declare a new type for the states
-  
+  type FetchState is (idle,reading,incPC);
   
   -- declare signals for current state (and next state)
-  
+  signal currentState : FetchState;
+	signal nextState		: FetchState;
 
   -- Instruction register enable  
   signal IR_iEn : std_logic;
@@ -78,8 +79,59 @@ architecture moore of fetch is
 begin
 
   -- Write the code of the FSM here
+	
+	process (rst, clk)
+	begin
+		if (rst = '1') then
+			currentState <= idle;
+		elsif (clk = '1' and clk'event) then
+			currentState <= nextState;
+		end if;
+	end process;  
+
+	process (memReady, ReadInstr, currentState)
+	begin
+		if (currentState = idle) then
+			if (readInstr = '1') then
+				nextState <= reading;
+			else
+				nextState <= idle;
+			end if;
+		elsif (currentState = reading) then
+			if (memReady = '1') then 
+				nextState <= incPC;
+			else
+				nextState <= reading;
+			end if;
+		else
+			if (readInstr = '1') then
+				nextState <= reading;
+			else
+				nextState <= idle;
+			end if;
+		end if;
+	end process;
   
-  
+	process (vldInstr, PCinc, memRd, IR_iEn, currentState)
+	begin
+		if (currentState = idle) then
+			PCinc <= '0';
+			vldInstr <= '1';
+			memRd <= '0';
+			IR_iEn <= '0';				
+		elsif (currentState = reading) then
+			PCinc <= '0';
+			vldInstr <= '0';
+			memRd <= '1';
+			IR_iEn <= '0';
+		else
+			PCinc <= '1';
+			vldInstr <= '1';
+			memRd <= '0';
+			IR_iEn <= '1';
+		end if;
+	end process;
+
   -- Instruction register  
   process (rst, clk)
   begin

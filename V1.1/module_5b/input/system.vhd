@@ -86,20 +86,91 @@ architecture struct of system is
   signal IO_dataIn   : std_logic_vector (DATA_WIDTH - 1 downto 0);
   signal unconnected_databus1 : std_logic_vector (DATA_WIDTH - 1 downto 0);
   signal unconnected_databus2 : std_logic_vector (DATA_WIDTH - 1 downto 0);
+--------------------
+-- BEGIN ADD CODE --
+--------------------
+	signal unconnected_databus3 : std_logic_vector (5 downto 0);
+	signal wordByteUC 					: std_logic;
+	signal IORdUC								: std_logic;
+	signal IOWrUC								: std_logic;
+	signal IO_dataOutUC					: std_logic_vector (DATA_WIDTH - 1 downto 0);
+	signal readyIOUC						: std_logic;	
 
 begin
 
   -- CPU
+	cpu_system : cpu port map(
+				rst => rst,
+				clk => clk,
+				rqDPT => DPT_memRq,
+				rdDPT => DPT_memRd,
+				wrDPT => DPT_memWr,
+				addrDPT => DPT_addr_bus,
+				inDPT => DPT_data_in,
+				outDPT => DPT_data_out,
+				memReadyDPT => DPT_memReady,
+				rqFch => fch_memRq,
+				rdFch => fch_memRd,
+				addrFch => fch_addr_bus,
+				inFch => fch_data_in,
+				memReadyFch => fch_memReady,
+				deviceID => unconnected_databus3,
+				wordByte => wordByteUC,
+				IORd => IORdUC,
+				IOReady => 'U',
+				IO_dataIn => "00000000000000000000000000000000",
+				IO_dataOut => IO_dataOutUC
+  	);
 
-  
   -- Memory Traffic Controller
-  
+	memCtrl_system : memCtrl port map (
+    rst  => rst,
+    clk  => clk,
+    -- Data path
+    rqDPT  => DPT_memRq,
+    rdDPT  => DPT_memRd,
+    wrDPT  => DPT_memWr,
+    addrDPT => DPT_addr_bus,
+    inDPT   => DPT_data_in,
+    outDPT  => DPT_data_out,
+    readyDPT => DPT_memReady,
+    -- Fetch unit
+    rqFch    => fch_memRq,
+    rdFch    => fch_memRd,
+    addrFch  => fch_addr_bus,
+    inFch    => fch_data_in,
+    readyFch => fch_memReady,
+    -- I/O unit
+    rqIO        => '0',
+    rdIO        => '0',
+    wrIO        => '0',
+    addrIO      => "000000000000",
+    inIO        => IO_dataOutUC,
+    outIO       => "00000000000000000000000000000000",
+    readyIO     => readyIOUC,
+    -- control signals
+    addr        => mem_addr_bus,
+    dataIn      => mem_data_in,
+    dataOut     => mem_data_out,
+    memRd       => memRd,
+    memWr       => memWr,
+    memReady    => memReady);  
       
 
   -- Main Memory    
-
+	 memory_system : memory
+    port map (
+      clk         => clk,
+      inBus       => mem_data_in,
+      addr        => mem_addr_bus,
+      rd          => memRd,
+      wr          => memWr, 
+      outBus      => mem_data_out,
+      ready       => memReady);
       
 end architecture;
 
-
+--------------------
+ -- END ADD CODE --
+--------------------
 

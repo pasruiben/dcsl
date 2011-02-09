@@ -113,7 +113,7 @@ architecture behavioral of control is
   
   alias Bsel : std_logic_vector (4 downto 0) is instReg (9 downto 5);
   -- condition mask
-  alias cmask : std_logic_vector (5 downto 0) is instReg (26 downto 21); 
+  alias cmask : std_logic_vector (5 downto 0) is instReg (6 downto 1); 
   alias pn : std_logic is instReg (6); -- polarity of negative
   alias pv : std_logic is instReg (5); -- polarity of overflow
   alias pz : std_logic is instReg (4); -- polarity of zero
@@ -135,7 +135,7 @@ begin
   -- Use the alias above. 
   -- Add code here
 
-  
+  cTrue <= '0' when ((cn='1' and pn /= neg) or (cv='1' and pv /= ovf) or (cz='1' and pz /= zro)) else '1';
 
   -- ===========================================================================
   -- Decode unit
@@ -143,7 +143,7 @@ begin
   -- Incorporate the decode unit here (using the decoding instruction 'decodeInstr')
   -- Add code here
   
-  
+	dec <= decodeInstr(instReg,cTrue);  
        
   -- ===========================================================================
   -- Execute unit FSM

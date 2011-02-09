@@ -67,16 +67,52 @@ package micro_control_pk is
   -- complete the  code here
   type dec_t is record
     instrGroup  : instrGroup_t;
-    ......
-    ......
+  --------------------
+  -- BEGIN ADD CODE --
+  --------------------
+		Asel 				: std_logic_vector (4 downto 0);
+		Bsel 				: std_logic_vector (4 downto 0);
+		Csel 				: std_logic_vector (4 downto 0);
+		ALUsel 			: alu_op;
+		shiftCnt 		: std_logic_vector (4 downto 0);
+		shiftCntSrc : std_logic;
+		portAsel		: std_logic;
+		portBsel		: std_logic;
+		CFen				: std_logic;
+		STKen				: std_logic;
+		DATAsel			: std_logic_vector (1 downto 0);
+		MBRsel			: std_logic;
+		memAddr			: std_logic_vector (11 downto 0);
   end record;
   
   -- Execute unit control lines (Execute Bundle)
   -- Declare a new type exe_t as a record for the execute bundle as shown in the lab manual  (use the table)
   -- add code here
-  .....
-  .....
-  
+	  
+	type exe_t is record
+		Asel				: std_logic_vector (4 downto 0);
+		Bsel				: std_logic_vector (4 downto 0);
+		Csel				: std_logic_vector (4 downto 0);
+		ALUsel			: alu_op;
+		CFen				: std_logic;
+		DATAsel			:	std_logic_vector (1 downto 0);
+		MBRsel			: std_logic;
+		RegFileWr		: std_logic;
+		stkInc			: std_logic;
+		stkDec 			: std_logic;
+		ACCen				: std_logic;
+		MARen				: std_logic;
+		MBRen				: std_logic;
+		PCen				: std_logic;
+		IRen				: std_logic;
+		STKpop			: std_logic;
+		STKpush			: std_logic;
+		memRd				: std_logic;
+		memWr 			: std_logic;						
+	end record;
+  --------------------
+   -- END ADD CODE --
+  --------------------
   
   -- Decode unit
   function decodeInstr (instReg : std_logic_vector (DATA_WIDTH - 1 downto 0);
@@ -133,30 +169,37 @@ package body micro_control_pk is
     -- left operand is port A of the register file or the accumulator
     alias aAcc        : std_logic is instReg (17);
     
+  --------------------
+  -- BEGIN ADD CODE --
+  --------------------
+
     -- 3. bAcc
-    
+		alias bAcc				: std_logic is instReg (16);    
     -- 4. storeC
-    
+    alias storeC			: std_logic is instReg (15);
     -- 5. Asel (register file port A selection lines)
-    
+    alias Asel				: std_logic_vector (4 downto 0) is instReg (14 downto 10);
     -- 6. Bsel (register file port B selection lines)
-    
+    alias Bsel				: std_logic_vector (4 downto 0) is instReg (9 downto 5);
     -- 7. Csel (register file port C selection lines)
-    
+    alias Csel				: std_logic_vector (4 downto 0) is instReg (4 downto 0);
     -- 8. shiftCntSrc (shift count source)
-    
+    alias shiftCntSrc : std_logic is instReg (24);
     -- 9. shiftDirect (shift direction)
-    
+    alias shiftDirect : std_logic is instReg (23);
     -- 10. shiftCnt (shift count)
-    
+    alias shiftCnt		: std_logic_vector (4 downto 0) is instReg (22 downto 18);
     -- 11. inx (index register)
-     
+    alias inx					:	std_logic_vector (1 downto 0) is instReg (26 downto 25);
     -- 12. STKen (stack enable)
-    
+    alias STKen				: std_logic is instReg (0);
     -- 13. shortAddr (page-0 address): this is given as an example:
     alias shortAddr   : std_logic_vector (SHORT_DATA - 1 downto 0) 
       is instReg (26 downto 18);
-    
+	--------------------
+   -- END ADD CODE --
+  --------------------    
+
   begin
   
     -- default return values
@@ -228,9 +271,48 @@ package body micro_control_pk is
          ret.instrGroup := G2;
          ret.CFen       := '1';
        end if;
-     when .....                     -- add code here
-     ....
-     ....
+  --------------------
+  -- BEGIN ADD CODE --
+  --------------------
+			when INC_i | DEC_i | NOT_i | ZRO_i | CPR_i =>
+				ret.instrGroup := G2;
+				ret.CFen := '1';
+			when CMP_i =>
+				ret.instrGroup := G3;
+				ret.CFen := '1';
+			when LD_i =>
+				ret.instrGroup := G4;
+			when LDX_i =>
+				ret.instrGroup := G5;
+			when LDM_i =>
+				ret.instrGroup := G6;
+			when ST_i =>
+				ret.instrGroup := G7;
+			when STX_i =>
+				ret.instrGroup := G8;
+			when JYY_i =>
+				if (Ctrue = '0') then
+					ret.instrGroup := G12;
+				else
+					ret.instrGroup := G9;
+				end if;
+			when RTN_i =>
+					ret.instrGroup := G10;
+			when END_i =>
+					ret.instrGroup := G11;
+			when NLL_i =>
+					ret.instrGroup := G12;
+			when PSH_i =>
+					ret.instrGroup := G13;
+			when POP_i =>
+					ret.instrGroup := G14;
+			when IN_i =>
+					ret.instrGroup := G15;
+			when OUT_i =>
+					ret.instrGroup := G16;
+  --------------------
+   -- END ADD CODE --
+  --------------------     
      when others =>
        ret.instrGroup := G12; -- Equivalent to NLL
     end case;
