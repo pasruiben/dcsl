@@ -43,6 +43,10 @@ POP R0; -- INDEX OF FIRST ELEMENT
 -- add your code here <----------------
 -- do the swap of R1 and R0
 -- you may use R2 and R3 
+LD R1 R2; -- Cargo r1 en r2
+LD R0 R3; -- Cargo r0 en r3
+ST R2 R0; -- Almaceno r2 (el antiguo r1) en r0
+ST R3 R1; -- Almaceno r3 (el antiguo r0) en r1
 
 RTN;
 -----------------------------------
