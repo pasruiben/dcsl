@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                       */
 /**********************************************************************/
 
-/* This file is designed for use with ISim build 0x42e8db27 */
+/* This file is designed for use with ISim build 0xef153c89 */
 
 #include "xsi.h"
 #include <memory.h>
@@ -23,11 +23,11 @@
 extern char *IEEE_P_1242562249;
 extern char *STD_STANDARD;
 
-char *p_1242562249_sub_3322286019_1242562249(char *, char *, char *, char *, int );
-char *p_1242562249_sub_3337867729_1242562249(char *, char *, char *, char *, char *, char *);
+char *ieee_p_1242562249_sub_3322286019_1242562249(char *, char *, char *, char *, int );
+char *ieee_p_1242562249_sub_3337867729_1242562249(char *, char *, char *, char *, char *, char *);
 
 
-char *p_2058167884_sub_2625274847_2058167884(char *t1, char *t2, char *t3, char *t4, char *t5, char *t6)
+char *work_p_2058167884_sub_2625274847_2058167884(char *t1, char *t2, char *t3, char *t4, char *t5, char *t6)
 {
     char t8[24];
     char t15[16];
@@ -51,7 +51,7 @@ char *p_2058167884_sub_2625274847_2058167884(char *t1, char *t2, char *t3, char 
     char *t26;
     char *t27;
     unsigned int t28;
-    int t29;
+    unsigned int t29;
     char *t30;
     int t31;
     char *t32;
@@ -80,12 +80,12 @@ LAB4:    t14 = (t8 + 16U);
     t17 = (t4 + 12U);
     t18 = *((unsigned int *)t17);
     t19 = (t18 / 2);
-    t20 = p_1242562249_sub_3322286019_1242562249(IEEE_P_1242562249, t16, t3, t4, t19);
+    t20 = ieee_p_1242562249_sub_3322286019_1242562249(IEEE_P_1242562249, t16, t3, t4, t19);
     t22 = (t6 + 12U);
     t23 = *((unsigned int *)t22);
     t24 = (t23 / 2);
-    t25 = p_1242562249_sub_3322286019_1242562249(IEEE_P_1242562249, t21, t5, t6, t24);
-    t26 = p_1242562249_sub_3337867729_1242562249(IEEE_P_1242562249, t15, t20, t16, t25, t21);
+    t25 = ieee_p_1242562249_sub_3322286019_1242562249(IEEE_P_1242562249, t21, t5, t6, t24);
+    t26 = ieee_p_1242562249_sub_3337867729_1242562249(IEEE_P_1242562249, t15, t20, t16, t25, t21);
     t27 = (t15 + 12U);
     t28 = *((unsigned int *)t27);
     t29 = (1U * t28);
@@ -120,7 +120,7 @@ LAB5:    *((char **)t12) = *((char **)t5);
 LAB6:;
 }
 
-unsigned char p_2058167884_sub_1124941373_2058167884(char *t1, char *t2, char *t3)
+unsigned char work_p_2058167884_sub_1124941373_2058167884(char *t1, char *t2, char *t3)
 {
     char t5[16];
     unsigned char t0;
@@ -179,7 +179,7 @@ LAB7:    goto LAB5;
 LAB8:;
 }
 
-unsigned char p_2058167884_sub_4174218510_2058167884(char *t1, char *t2, char *t3, int t4)
+unsigned char work_p_2058167884_sub_4174218510_2058167884(char *t1, char *t2, char *t3, int t4)
 {
     char t5[72];
     char t6[16];
@@ -218,10 +218,11 @@ unsigned char p_2058167884_sub_4174218510_2058167884(char *t1, char *t2, char *t
     int t38;
     int t39;
     int t40;
-    unsigned int t41;
+    int t41;
     unsigned int t42;
-    unsigned char t43;
+    unsigned int t43;
     unsigned char t44;
+    unsigned char t45;
 
 LAB0:    t7 = (t3 + 12U);
     t8 = *((unsigned int *)t7);
@@ -246,7 +247,7 @@ LAB0:    t7 = (t3 + 12U);
     t17 = (t16 + 12U);
     *((unsigned int *)t17) = t19;
     t17 = (t5 + 4U);
-    t20 = ((IEEE_P_1242562249) + 1664);
+    t20 = ((IEEE_P_1242562249) + 1684);
     t21 = (t17 + 48U);
     *((char **)t21) = t20;
     t22 = (char *)alloca(t11);
@@ -297,26 +298,29 @@ LAB5:    t13 = (t17 + 32U);
     t35 = *((int *)t20);
     t36 = (t18 - t34);
     t8 = (t36 * t35);
+    t21 = (t12 + 4U);
+    t37 = *((int *)t21);
+    xsi_vhdl_check_range_of_index(t34, t37, t35, t18);
     t11 = (1U * t8);
     t14 = (0 + t11);
-    t21 = (t16 + t14);
-    t27 = *((unsigned char *)t21);
-    t23 = (t17 + 32U);
-    t24 = *((char **)t23);
-    t23 = (t12 + 0U);
-    t37 = *((int *)t23);
-    t25 = (t12 + 0U);
-    t38 = *((int *)t25);
-    t30 = (t12 + 8U);
+    t23 = (t16 + t14);
+    t27 = *((unsigned char *)t23);
+    t24 = (t17 + 32U);
+    t25 = *((char **)t24);
+    t24 = (t12 + 0U);
+    t38 = *((int *)t24);
+    t30 = (t12 + 0U);
     t39 = *((int *)t30);
-    t40 = (t37 - t38);
-    t19 = (t40 * t39);
-    t41 = (1U * t19);
-    t42 = (0 + t41);
-    t31 = (t24 + t42);
-    t43 = *((unsigned char *)t31);
-    t44 = (t27 != t43);
-    if (t44 != 0)
+    t31 = (t12 + 8U);
+    t40 = *((int *)t31);
+    t41 = (t38 - t39);
+    t19 = (t41 * t40);
+    t42 = (1U * t19);
+    t43 = (0 + t42);
+    t32 = (t25 + t43);
+    t44 = *((unsigned char *)t32);
+    t45 = (t27 != t44);
+    if (t45 != 0)
         goto LAB8;
 
 LAB10:
@@ -333,7 +337,7 @@ LAB11:    goto LAB9;
 LAB12:;
 }
 
-int p_2058167884_sub_3504879441_2058167884(char *t1, int t2)
+int work_p_2058167884_sub_3504879441_2058167884(char *t1, int t2)
 {
     char t3[72];
     char t4[8];
@@ -413,7 +417,7 @@ LAB10:;
 
 extern void work_p_2058167884_init()
 {
-	static char *se[] = {(void *)p_2058167884_sub_2625274847_2058167884,(void *)p_2058167884_sub_1124941373_2058167884,(void *)p_2058167884_sub_4174218510_2058167884,(void *)p_2058167884_sub_3504879441_2058167884};
+	static char *se[] = {(void *)work_p_2058167884_sub_2625274847_2058167884,(void *)work_p_2058167884_sub_1124941373_2058167884,(void *)work_p_2058167884_sub_4174218510_2058167884,(void *)work_p_2058167884_sub_3504879441_2058167884};
 	xsi_register_didat("work_p_2058167884", "isim/_tmp/work/p_2058167884.didat");
 	xsi_register_subprogram_executes(se);
 }
