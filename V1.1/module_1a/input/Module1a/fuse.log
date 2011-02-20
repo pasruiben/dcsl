@@ -1,28 +1,26 @@
+Running : C:\Xilinx\10.1\ISE\bin\nt\unwrapped\fuse.exe -ise C:/Users/Pascual
+Javier/Documents/INGENIERIA/DCSL/DCSL/V1.1/module_1a/input/Module1a/Module1a.ise
+-intstyle ise -incremental -o tb_micro_pk_isim_beh.exe -prj tb_micro_pk_beh.prj
+-top tb_micro_pk
 Determining compilation order of HDL files
 Analyzing VHDL file ../micro_pk.vhd
 Restoring VHDL parse-tree ieee.std_logic_1164 from
-/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/std_logic_1164.vdb
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/std_logic_1164.vdb
 Restoring VHDL parse-tree std.standard from
-/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/std/standard.vdb
+c:/xilinx/10.1/ise/vhdl/hdp/nt/std/standard.vdb
 Restoring VHDL parse-tree ieee.numeric_std from
-/opt/Xilinx/10.1/ISE/vhdl/hdp/lin/ieee/numeric_std.vdb
+c:/xilinx/10.1/ise/vhdl/hdp/nt/ieee/numeric_std.vdb
 Analyzing VHDL file ../tb_micro_pk.vhd
-Saving VHDL parse-tree work.micro_pk into
-/home/pascual/INGENIERIA/DCSL/V1.1/module_1a/input/Module1a/isim/work/micro_pk.v
-db
-Saving VHDL parse-tree work.tb_micro_pk into
-/home/pascual/INGENIERIA/DCSL/V1.1/module_1a/input/Module1a/isim/work/tb_micro_p
-k.vdb
+Saving VHDL parse-tree work.micro_pk into c:/users/pascual
+javier/documents/ingenieria/dcsl/dcsl/v1.1/module_1a/input/module1a/isim/work/mi
+cro_pk.vdb
+Saving VHDL parse-tree work.tb_micro_pk into c:/users/pascual
+javier/documents/ingenieria/dcsl/dcsl/v1.1/module_1a/input/module1a/isim/work/tb
+_micro_pk.vdb
 Starting static elaboration
-WARNING:HDLCompiler:746 -
-   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 867. Range is
-   empty (null range)
-WARNING:HDLCompiler:746 -
-   "/build/xfndry8/K.31/rtf/vhdl/src/ieee/numeric_std.vhd" Line 868. Range is
-   empty (null range)
 Completed static elaboration
-Fuse Memory Usage: 23452 Kb
-Fuse CPU Usage: 850 ms
+Fuse Memory Usage: 115392 Kb
+Fuse CPU Usage: 529 ms
 Using precompiled package standard from library std
 Using precompiled package std_logic_1164 from library ieee
 Using precompiled package numeric_std from library ieee
@@ -30,6 +28,5 @@ Compiling package micro_pk
 Compiling architecture test of entity tb_micro_pk
 Compiled 5 VHDL Units
 Built simulation executable tb_micro_pk_isim_beh.exe
-Fuse Memory Usage: 24480 Kb
-Fuse CPU Usage: 880 ms
-GCC CPU Usage: 830 ms
+Fuse Memory Usage: 116780 Kb
+Fuse CPU Usage: 592 ms
